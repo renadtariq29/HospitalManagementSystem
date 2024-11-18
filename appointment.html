@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Management</title>
+</head>
+<body>
+    <h1>Appointment Management</h1>
+    <form id="appointmentForm">
+        <label for="patientId">Patient ID:</label>
+        <input type="text" id="patientId" name="patientId" required><br><br>
+
+        <label for="doctorId">Doctor ID:</label>
+        <input type="text" id="doctorId" name="doctorId" required><br><br>
+
+        <button type="submit">Schedule Appointment</button>
+    </form>
+
+    <div id="appointmentConfirmationMessage" style="display: none;">
+        <h2>Appointment scheduled successfully!</h2>
+    </div>
+
+    <script>
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Simulate scheduling appointment (backend logic would go here)
+            document.getElementById("appointmentConfirmationMessage").style.display = "block";
+        });
+    </script>
+</body>
+</html>
